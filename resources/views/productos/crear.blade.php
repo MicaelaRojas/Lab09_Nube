@@ -21,6 +21,12 @@
                         <input name="descripcion" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" required/>
                     </div>
                 </div>
+      @if ($message = Session::get('success'))
+                    <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>{{ $message }}</strong>
+                    </div>
+                @endif
 
                 <!-- Para ver la imagen seleccionada, de lo contrario no se -->
                 <div class="grid grid-cols-1 mt-5 mx-7">
